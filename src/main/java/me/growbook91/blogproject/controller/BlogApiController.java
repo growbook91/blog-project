@@ -28,6 +28,7 @@ public class BlogApiController {
 
     @GetMapping("/api/articles")
     public ResponseEntity<List<ArticleResponse>> findAllAritcles(){
+        //stream은 뭘까
         List<ArticleResponse> articles = blogService.findAll()
                 .stream()
                 .map(ArticleResponse::new)
@@ -42,6 +43,7 @@ public class BlogApiController {
             Article article = blogService.findById(id);
 
             // 이 친구의 역할은 뭘까..?
+            // 얘가 데이터의 전송을 담당하는 것 같다.
             return ResponseEntity.ok()
                     .body(new ArticleResponse(article));
     }
