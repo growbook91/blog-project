@@ -1,6 +1,6 @@
 // 삭제 기능
 const deleteButton = document.getElementById('delete-btn');
-
+//여기 부분 공부해야 한다.
 if (deleteButton) {
     deleteButton.addEventListener('click', event => {
         let id = document.getElementById('article-id').value;

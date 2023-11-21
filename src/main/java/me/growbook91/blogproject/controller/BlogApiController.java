@@ -4,11 +4,13 @@ import lombok.RequiredArgsConstructor;
 import me.growbook91.blogproject.domain.Article;
 import me.growbook91.blogproject.dto.AddArticleRequest;
 import me.growbook91.blogproject.dto.ArticleResponse;
+import me.growbook91.blogproject.dto.ArticleViewResponse;
 import me.growbook91.blogproject.dto.UpdateArticleRequest;
 import me.growbook91.blogproject.service.BlogService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -63,4 +65,6 @@ public class BlogApiController {
         return ResponseEntity.ok()
                 .body(updateArticle);
     }
+
+
 }
