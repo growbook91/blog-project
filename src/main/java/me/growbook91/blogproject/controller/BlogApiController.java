@@ -27,6 +27,7 @@ public class BlogApiController {
     }
 
     @GetMapping("/api/articles")
+    // 여기서 볼 수 있는 것처럼 response나 request를 요청할 때는 그냥 하지 않고 DTO라는 class를 만들어서 그걸 통해 data를 주고 받는 구나.
     public ResponseEntity<List<ArticleResponse>> findAllAritcles(){
         List<ArticleResponse> articles = blogService.findAll()
                 .stream()
@@ -42,6 +43,7 @@ public class BlogApiController {
             Article article = blogService.findById(id);
 
             // 이 친구의 역할은 뭘까..?
+            // 이 친구는 HTTP 응답의 body로 쓸 내용.
             return ResponseEntity.ok()
                     .body(new ArticleResponse(article));
     }
