@@ -30,7 +30,9 @@ public class BlogApiController {
     // 여기서 볼 수 있는 것처럼 response나 request를 요청할 때는 그냥 하지 않고 DTO라는 class를 만들어서 그걸 통해 data를 주고 받는 구나.
     public ResponseEntity<List<ArticleResponse>> findAllAritcles(){
         List<ArticleResponse> articles = blogService.findAll()
+                // 오...이걸 통해서 list가 변경되네..
                 .stream()
+                // 여기서 어떤 함수를 사용해서 바꿀 건지를 지정하는 듯...
                 .map(ArticleResponse::new)
                 .toList();
 
