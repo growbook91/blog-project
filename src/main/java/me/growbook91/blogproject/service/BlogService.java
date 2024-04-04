@@ -1,5 +1,6 @@
 package me.growbook91.blogproject.service;
 
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import me.growbook91.blogproject.domain.Article;
 import me.growbook91.blogproject.dto.AddArticleRequest;
@@ -7,7 +8,7 @@ import me.growbook91.blogproject.dto.UpdateArticleRequest;
 import me.growbook91.blogproject.repository.BlogRepository;
 import org.springframework.stereotype.Service;
 
-import javax.transaction.Transactional;
+
 import java.util.List;
 
 @RequiredArgsConstructor
