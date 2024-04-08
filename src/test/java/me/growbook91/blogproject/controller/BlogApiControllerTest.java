@@ -1,6 +1,7 @@
 package me.growbook91.blogproject.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import jakarta.transaction.Transactional;
 import me.growbook91.blogproject.domain.Article;
 import me.growbook91.blogproject.dto.UpdateArticleRequest;
 import me.growbook91.blogproject.repository.BlogRepository;
@@ -17,7 +18,7 @@ import org.springframework.test.web.servlet.ResultActions;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 
-import javax.transaction.Transactional;
+
 import java.util.List;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
